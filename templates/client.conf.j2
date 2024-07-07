@@ -5,6 +5,9 @@ Client {
   Name = "{{ item.name }}"
   Address = "{{ item.address }}"
   Password = "{{ item.password }}"
+{% if item.port is defined %}
+  Port = {{ item.port }}
+{% endif %}
 {% if item.maximum_concurrent_jobs is defined %}
   Maximum Concurrent Jobs = {{ item.maximum_concurrent_jobs }}
 {% endif %}
